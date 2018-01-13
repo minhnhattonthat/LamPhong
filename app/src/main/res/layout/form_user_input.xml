@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:isScrollContainer="true"
+    android:paddingEnd="20dp"
+    android:paddingStart="20dp">
+
+    <FrameLayout
+        android:id="@+id/avatar_wrapper"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="30dp"
+        android:layout_marginTop="30dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/input_avatar"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            app:srcCompat="@drawable/ic_default_avatar" />
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="end|bottom"
+            android:layout_marginBottom="25dp"
+            android:layout_marginEnd="20dp"
+            app:srcCompat="@drawable/ic_camera_avatar" />
+    </FrameLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/input_layout_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/avatar_wrapper">
+
+        <com.lamphongstore.lamphong.material.LPEditText
+            android:id="@+id/input_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_name"
+            android:inputType="textPersonName"
+            android:nextFocusLeft="@id/input_name"
+            android:nextFocusUp="@id/input_name" />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/input_layout_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/input_layout_name">
+
+        <com.lamphongstore.lamphong.material.LPEditText
+            android:id="@+id/input_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_email"
+            android:inputType="textEmailAddress" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/input_layout_phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/input_layout_email">
+
+        <com.lamphongstore.lamphong.material.LPEditText
+            android:id="@+id/input_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_phone"
+            android:inputType="phone" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/input_layout_birthday"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/input_layout_phone">
+
+        <com.lamphongstore.lamphong.material.LPEditText
+            android:id="@+id/input_birthday"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_birthday"
+            android:inputType="none" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/input_layout_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/input_layout_birthday">
+
+        <com.lamphongstore.lamphong.material.LPEditText
+            android:id="@+id/input_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_address"
+            android:inputType="textPostalAddress" />
+    </android.support.design.widget.TextInputLayout>
+
+    <LinearLayout
+        android:id="@+id/input_layout_gender"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/input_layout_address"
+        android:paddingTop="10dp">
+
+        <TextView
+            android:id="@+id/gender_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="45dp"
+            android:text="@string/hint_gender"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+            android:textColor="@color/colorTint" />
+
+        <RadioGroup
+            android:id="@+id/input_gender"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/input_gender_male"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_weight="1"
+                android:text="@string/choice_male"
+                android:textColor="@color/colorTint" />
+
+            <RadioButton
+                android:id="@+id/input_gender_female"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_weight="1"
+                android:text="@string/choice_female"
+                android:textColor="@color/colorTint" />
+        </RadioGroup>
+
+    </LinearLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/input_layout_refcode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/input_layout_gender">
+
+        <com.lamphongstore.lamphong.material.LPEditText
+            android:id="@+id/input_refcode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_ref_code"
+            android:inputType="textCapCharacters"
+            android:maxLength="6" />
+    </android.support.design.widget.TextInputLayout>
+
+</RelativeLayout>

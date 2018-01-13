@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.lamphongstore.lamphong">
+
+    <!-- For saving images to the internal and external storage. -->
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature android:name="android.hardware.camera" android:required="true"/>
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!-- Calling when click on phone number in branch office activity-->
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+    <application
+        android:allowBackup="true"
+        android:fullBackupContent="true"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:name="android.support.multidex.MultiDexApplication"
+        tools:replace="android:icon,android:theme" >
+
+        <!-- google vision -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="com.google.android.gms.vision.DEPENDENCIES"
+            android:value="barcode,face" />
+        <!--  -->
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/ic_tv_dark" />
+        <!-- facebook -->
+        <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/facebook_app_id"/>
+        <provider android:name="com.facebook.FacebookContentProvider"
+            android:authorities="com.facebook.app.FacebookContentProvider220286601783723"
+            android:exported="true"/>
+        <!-- close facebook-->
+        <!-- for saving image after capture-->
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.lamphongstore.lamphong.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+        <activity
+            android:name=".activities.MainActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.transparent.StatusBar">
+        </activity>
+        <activity
+            android:name=".activities.SignUpActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoStatusBar"/>
+        <activity android:name=".activities.LauchScreen"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.transparent.StatusBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activities.GenerateQRActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Fullscreen"/>
+        <activity
+            android:name=".activities.WebViewActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"/>
+        <activity
+            android:name=".activities.ScanQRActivity"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoStatusBar"/>
+        <activity
+            android:name=".activities.LoginActivity"
+            android:label="@string/title_activity_login"
+            android:parentActivityName=".activities.MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoStatusBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.lamphongstore.lamphong.activities.MainActivity" />
+        </activity>
+        <activity
+            android:name=".activities.ProfileActivity"
+            android:label="@string/label_profile_activity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activities.BranchOfficeActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activities.PointAccumulating"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait"/>
+        <service
+            android:name=".utils.LPFirebaseMessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+        <service
+            android:name=".utils.LPFirebaseInstanceIDService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
+            </intent-filter>
+        </service>
+
+        <activity android:name=".activities.ChangePassword"
+            android:parentActivityName=".activities.ProfileActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.transparent.StatusBar" />
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="72d9efc543e2f406ef5d769f0623a4eff0be92e5" />
+    </application>
+
+</manifest>

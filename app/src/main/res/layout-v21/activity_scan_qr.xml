@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fillViewport="true"
+    android:scrollbars="none">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/allScanRelativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:paddingEnd="40dp"
+        android:paddingStart="40dp">
+
+        <ImageView
+            android:id="@+id/imgViewQrCode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            app:srcCompat="@drawable/ic_icon_qrcode" />
+
+        <com.lamphongstore.lamphong.material.CameraSourcePreview
+            android:id="@+id/preview"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:layout_below="@+id/imgViewQrCode"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp">
+
+            <com.lamphongstore.lamphong.material.GraphicOverlay
+                android:id="@+id/graphicOverlay"
+                android:layout_width="300dp"
+                android:layout_height="300dp" />
+
+            <View
+                android:layout_width="10dp"
+                android:layout_height="20dp"
+                android:background="@drawable/ic_qrcode_camera" />
+
+        </com.lamphongstore.lamphong.material.CameraSourcePreview>
+
+        <TextView
+            android:id="@+id/barScannedInstruction"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/preview"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:text="Nhập mã QR"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/barScannedInstructionQRcode"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/barScannedInstruction"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="QR code " />
+
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/input_layout_customer_code_manual"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/barScannedInstructionQRcode"
+            android:layout_centerHorizontal="true">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/txtCustomerCodeManual"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="0dp"
+                android:backgroundTint="@color/colorTint"
+                android:maxLines="1"
+                android:textColor="@color/colorTint" />
+        </android.support.design.widget.TextInputLayout>
+
+        <Button
+            android:id="@+id/btnInsertPoint"
+            android:layout_width="200dp"
+            android:layout_height="45dp"
+            android:layout_below="@+id/input_layout_customer_code_manual"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/button_shape"
+            android:paddingBottom="14dp"
+            android:paddingTop="14dp"
+            android:text="Nhập Điểm"
+            android:textColor="@android:color/white" />
+
+        <ImageView
+            android:id="@+id/btnBackScanQr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@id/btnInsertPoint"
+            android:layout_centerHorizontal="true"
+            android:padding="10dp"
+            app:srcCompat="@drawable/ic_delete" />
+    </RelativeLayout>
+</ScrollView>

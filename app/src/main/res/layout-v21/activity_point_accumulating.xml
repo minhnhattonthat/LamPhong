@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fillViewport="true"
+    android:scrollbars="none">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        tools:context="com.lamphongstore.lamphong.activities.PointAccumulating">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/point_accumulating_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="0dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Tích Điểm"
+                android:textColor="@color/colorPrimary"
+                android:textSize="18sp" />
+        </android.support.v7.widget.Toolbar>
+
+        <TextView
+            android:id="@+id/customerName"
+            android:layout_width="300dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/point_accumulating_toolbar"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="50dp"
+            android:textAlignment="center"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/viewPoint"
+            android:layout_width="300dp"
+            android:layout_height="60dp"
+            android:layout_below="@+id/customerName"
+            android:layout_centerHorizontal="true"
+            android:textAlignment="center"
+            android:textColor="@color/colorAccent"
+            android:textSize="40sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/viewCustomerRank"
+            android:layout_width="300dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/viewPoint"
+            android:layout_centerHorizontal="true"
+            android:textAlignment="center"
+            android:textColor="@color/textMemberColor" />
+
+        <LinearLayout
+            android:id="@+id/linear_layout"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/viewCustomerRank"
+            android:layout_centerHorizontal="true"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/viewMoneyAmount"
+                android:layout_width="300dp"
+                android:layout_height="20dp"
+                android:text="Số Tiền "
+                android:textColor="@color/colorPrimary" />
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/input_layout_money_amount"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/txtMoneyAmount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="0dp"
+                    android:backgroundTint="@color/colorTint"
+                    android:maxLines="1"
+                    android:nextFocusLeft="@id/txtMoneyAmount"
+                    android:nextFocusUp="@id/txtMoneyAmount"
+                    android:textColor="@color/colorTint" />
+            </android.support.design.widget.TextInputLayout>
+
+            <TextView
+                android:id="@+id/viewIntroducerCode"
+                android:layout_width="300dp"
+                android:layout_height="20dp"
+                android:text="Mã Người Giới Thiệu "
+                android:textColor="@color/colorPrimary" />
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/input_layout_introducer_code"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/txtIntroducerCode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="0dp"
+                    android:backgroundTint="@color/colorTint"
+                    android:maxLines="1"
+                    android:nextFocusLeft="@id/txtIntroducerCode"
+                    android:nextFocusUp="@id/txtIntroducerCode"
+                    android:textColor="@color/colorTint" />
+            </android.support.design.widget.TextInputLayout>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnSave"
+            android:layout_width="200dp"
+            android:layout_height="45dp"
+            android:layout_below="@+id/linear_layout"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/button_shape"
+            android:text="Lưu"
+            android:textColor="@android:color/white" />
+
+    </RelativeLayout>
+</ScrollView>

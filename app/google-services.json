@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "420480155851",
+    "firebase_url": "https://lamphongstore-dd9ab.firebaseio.com",
+    "project_id": "lamphongstore-dd9ab",
+    "storage_bucket": "lamphongstore-dd9ab.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:420480155851:android:ef2fc960fca1e9e4",
+        "android_client_info": {
+          "package_name": "com.lamphongstore.lamphong"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "420480155851-k9uneibj3d5he22j02pq3v9rp87hecji.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.lamphongstore.lamphong",
+            "certificate_hash": "721217a4d9b4076f974d1cb74c936ac0655a988e"
+          }
+        },
+        {
+          "client_id": "420480155851-sjutctbt6n36iuvjgfhe6n6dmn1mv9nm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAxHeYEmHzxaJVrSxJIndtwxZwYmDEZV5A"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "420480155851-sjutctbt6n36iuvjgfhe6n6dmn1mv9nm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

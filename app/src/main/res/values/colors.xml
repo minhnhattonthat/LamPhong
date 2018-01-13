@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#000000</color>
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="colorAccent">#da3741</color>
+    <color name="textTitle">#ffffff</color>
+    <color name="textMemberColor">#7b7b7b</color>
+    <color name="colorGray">#f0f0f0</color>
+    <color name="colorTint">#a6a6a6</color>
+    <color name="mpc_start_color">@color/colorAccent</color>
+    <color name="mpc_end_color">@color/colorAccent</color>
+    <color name="mpc_default_color">#e6e7e8</color>
+</resources>

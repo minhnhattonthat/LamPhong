@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="115dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginTop="10dp"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    android:paddingBottom="18dp"
+    android:paddingEnd="0dp"
+    android:paddingStart="15dp"
+    android:paddingTop="17dp">
+
+    <ImageView
+        android:id="@+id/imageBranchOffice"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:background="#FFFFFF" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginStart="10dp"
+        android:layout_toEndOf="@+id/imageBranchOffice"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txtPlaceBranchOffice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <ImageView
+                android:id="@+id/imageIconPlace"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/icon_place_5e5e5e" />
+
+            <TextView
+                android:id="@+id/txtAddressBranchOffice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_toEndOf="@+id/imageIconPlace"
+                android:textSize="13sp" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/txtHotlineBranchOffice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/colorAccent" />
+    </LinearLayout>
+
+</RelativeLayout>
